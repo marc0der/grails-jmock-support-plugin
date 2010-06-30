@@ -27,7 +27,5 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
         test 'org.jmock:jmock:2.5.1'
         test 'org.jmock:jmock-junit4:2.5.1'
-
-        // runtime 'mysql:mysql-connector-java:5.1.5'
     }
 }
