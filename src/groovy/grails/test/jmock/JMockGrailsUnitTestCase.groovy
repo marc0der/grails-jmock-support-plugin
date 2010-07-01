@@ -14,4 +14,14 @@ import grails.test.GrailsUnitTestCase
  */
 class JMockGrailsUnitTestCase extends GrailsUnitTestCase {
 	Mockery mockery = new JUnit4GroovyMockery()
+	
+	/**
+	 * Asserts that two objects are equal.
+	 * @param expected The expected object.
+	 * @param actual The actual object.
+	 */
+	static void assertEquals(def expected, def actual){
+		assert expected == actual
+	}
+
 }

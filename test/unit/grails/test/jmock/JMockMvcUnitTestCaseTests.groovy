@@ -2,11 +2,11 @@ package grails.test.jmock
 
 import groovy.util.GroovyTestCase;
 
-class JMockControllerUnitTestCaseTests extends GroovyTestCase {
+class JMockMvcUnitTestCaseTests extends GroovyTestCase {
 	def testCase
 	
 	void setUp(){
-		testCase = new JMockControllerUnitTestCase(this.getClass())
+		testCase = new JMockMvcUnitTestCase(this.getClass())
 	}
 	
 	void testMockeryNotNull(){
@@ -20,5 +20,5 @@ class JMockControllerUnitTestCaseTests extends GroovyTestCase {
 	void testAssertEqualsTrue(){
 		testCase.assertEquals true, true
 	}
-	
+
 }

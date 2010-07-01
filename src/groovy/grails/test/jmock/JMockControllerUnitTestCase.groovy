@@ -32,6 +32,11 @@ class JMockControllerUnitTestCase extends ControllerUnitTestCase {
         super(controllerClass)
     }
 	
+	/**
+	 * Asserts that two objects are equal.
+	 * @param expected The expected object.
+	 * @param actual The actual object.
+	 */
 	static void assertEquals(def expected, def actual){
 		assert expected == actual
 	}
