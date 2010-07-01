@@ -18,7 +18,34 @@ class JMockControllerUnitTestCaseTests extends GroovyTestCase {
 	}
 	
 	void testAssertEqualsTrue(){
-		testCase.assertEquals true, true
+		testCase.assertEquals 1, 1
+	}
+	
+	void testAssertNotNull(){
+		testCase.assertNotNull 'not null'
+	}
+	
+	void testAssertNull(){
+		testCase.assertNull null
+	}
+	
+	void testAssertNotSame(){
+		def obj1 = new Object()
+		def obj2 = new Object()
+		testCase.assertNotSame obj1, obj2
+	}
+	
+	void testAssertSame(){
+		def obj1 = new Object()
+		testCase.assertSame obj1, obj1
+	}
+	
+	void testAssertTrue(){
+		testCase.assertTrue true
+	}
+	
+	void testAssertFalse(){
+		testCase.assertFalse false
 	}
 	
 }
