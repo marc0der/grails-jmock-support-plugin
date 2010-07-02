@@ -6,6 +6,6 @@ class MyController {
     
     def action = {
         String result = myService.tryit(params.id)
-        render(view:'success', model:[result:result])        
+        render(view:'success', model:[result:result])
     }
 }

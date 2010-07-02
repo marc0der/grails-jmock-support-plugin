@@ -2,7 +2,7 @@ package jmock.support
 
 import grails.test.jmock.*
 
-class MyControllerTests extends JMockControllerUnitTestCase {
+class MyControllerJunit3Tests extends JMockControllerUnitTestCase {
     def myService
     
     protected void setUp() {
