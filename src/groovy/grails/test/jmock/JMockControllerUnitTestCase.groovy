@@ -3,6 +3,10 @@ package grails.test.jmock
 import org.jmock.Mockery
 import grails.test.ControllerUnitTestCase
 
+import static grails.test.jmock.PowerAssert.assertEquals;
+import static grails.test.jmock.PowerAssert.assertNotSame;
+import static grails.test.jmock.PowerAssert.assertSame;
+
 /**
  * Support class for writing unit tests for controllers.
  * Inherits directly from {@link ControllerUnitTestCase}.
@@ -33,19 +37,11 @@ class JMockControllerUnitTestCase extends ControllerUnitTestCase {
     }
 	
 	/**
-	 * Asserts that two objects are equal.
-	 * @param expected The expected object.
-	 * @param actual The actual object.
-	 */
-	static void assertEquals(def expected, def actual){
-		assert expected == actual
-	}
-	
-	/**
 	 * Asserts that an object isn't null.
 	 * @param obj The object.
 	 */
 	static void assertNotNull(def obj){
+		println 'I am here!'
 		assert obj != null
 	}
 
@@ -54,25 +50,8 @@ class JMockControllerUnitTestCase extends ControllerUnitTestCase {
 	 * @param obj The object.
 	 */
 	static void assertNull(def obj){
+		println 'I am here!'
 		assert obj == null
-	}
-	
-	/**
-	 * Asserts that two objects do not refer to the same object.
-	 * @param unexpected The unexpected object.
-	 * @param actual The actual object.
-	 */
-	static void assertNotSame(def unexpected, def actual){
-		assert unexpected.hashCode() != actual.hashCode()
-	}
-	
-	/**
-	 * Asserts that two objects refer to the same object.
-	 * @param expected The expected object.
-	 * @param actual The unexpected object.
-	 */
-	static void assertSame(def expected, def actual){
-		assert expected.hashCode() == actual.hashCode()
 	}
 	
 	/**
@@ -80,6 +59,7 @@ class JMockControllerUnitTestCase extends ControllerUnitTestCase {
 	 * @param condition The condition.
 	 */
 	static void assertTrue(def condition){
+		println 'I am here!'
 		assert condition == true
 	}
 	
@@ -88,7 +68,49 @@ class JMockControllerUnitTestCase extends ControllerUnitTestCase {
 	 * @param condition The condition.
 	 */
 	static void assertFalse(def condition){
+		println 'I am here!'
 		assert condition == false
 	}
+
+	/**
+	 * Asserts that two integers are equal.
+	 * @param expected The expected object.
+	 * @param actual The actual object.
+	 */
+	static void assertEquals(int expected, int actual){
+		println 'I am here!'
+		assert expected == actual
+	}
 	
+	/**
+	 * Asserts that two doubles or floats are equal to within a positive delta.
+	 * @param expected The expected object
+	 * @param actual The actual object
+	 * @param delta The delta
+	 */
+	static void assertEquals(double expected, double actual, double delta){
+		println 'I am here!'
+		assert expected == actual
+	}
+	
+	/**
+	 * Asserts that two objects do not refer to the same object.
+	 * @param unexpected The unexpected object.
+	 * @param actual The actual object.
+	 */
+	static void assertNotSame(Object unexpected, Object actual){
+		println 'I am here!'
+		assert unexpected.hashCode() != actual.hashCode()
+	}
+	
+	/**
+	 * Asserts that two objects refer to the same object.
+	 * @param expected The expected object.
+	 * @param actual The unexpected object.
+	 */
+	static void assertSame(Object expected, Object actual){
+		println 'I am here!'
+		assert expected.hashCode() == actual.hashCode()
+	}
+
 }

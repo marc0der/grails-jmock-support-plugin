@@ -17,8 +17,28 @@ class JMockControllerUnitTestCaseTests extends GroovyTestCase {
 		assert testCase.mockery instanceof JUnit4GroovyMockery
 	}
 	
-	void testAssertEqualsTrue(){
+	void testAssertEqualsIntTrue(){
 		testCase.assertEquals 1, 1
+	}
+	
+	void testAssertEqualsDoubleTrue(){
+		testCase.assertEquals 1d, 1d
+	}
+	
+	void testAssertEqualsLongTrue(){
+		testCase.assertEquals Long.MAX_VALUE, Long.MAX_VALUE
+	}
+	
+	void testAssertEqualsObjectTrue(){
+		Object obj1 = new Integer(100)
+		Object obj2 = new Integer(100)
+		testCase.assertEquals obj1, obj2
+	}
+	
+	void testAssertEqualsStringTrue(){
+		String str1 = "A String"
+		String str2 = "A String"
+		testCase.assertEquals str1, str2
 	}
 	
 	void testAssertNotNull(){
