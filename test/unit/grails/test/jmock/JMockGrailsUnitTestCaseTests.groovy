@@ -9,24 +9,23 @@ class JMockGrailsUnitTestCaseTests extends GroovyTestCase {
 		testCase = new JMockGrailsUnitTestCase()
 	}
 	
-	void testMockeryNotNull(){
-		assert testCase.mockery != null
-	}
-	
-	void testMockeryType(){
-		assert testCase.mockery instanceof JUnit4GroovyMockery
-	}
-	
-	void testAssertEqualsTrue(){
+	void testAssertEqualsIntTrue(){
 		testCase.assertEquals 1, 1
 	}
 	
-	void testAssertNotNull(){
-		testCase.assertNotNull 'not null'
+	void testAssertEqualsLongTrue(){
+		testCase.assertEquals 1L, 1L
 	}
 	
-	void testAssertNull(){
-		testCase.assertNull null
+	void testAssertEqualsObjectTrue(){
+		Object obj = new Object()
+		testCase.assertEquals obj, obj
+	}
+	
+	void testAssertEqualsStringTrue(){
+		String str1 = "A String"
+		String str2 = "A String"
+		testCase.assertEquals str1, str2
 	}
 	
 	void testAssertNotSame(){
@@ -38,14 +37,6 @@ class JMockGrailsUnitTestCaseTests extends GroovyTestCase {
 	void testAssertSame(){
 		def obj1 = new Object()
 		testCase.assertSame obj1, obj1
-	}
-	
-	void testAssertTrue(){
-		testCase.assertTrue true
-	}
-	
-	void testAssertFalse(){
-		testCase.assertFalse false
 	}
 
 }

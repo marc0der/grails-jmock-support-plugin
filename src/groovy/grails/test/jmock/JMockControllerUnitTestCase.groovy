@@ -38,7 +38,6 @@ class JMockControllerUnitTestCase extends ControllerUnitTestCase {
 	 * @param actual The actual Object.
 	 */
 	static void assertEquals(Object expected, Object actual){
-		println 'I am here! Object'
 		assert expected == actual
 	}
 			
@@ -48,18 +47,6 @@ class JMockControllerUnitTestCase extends ControllerUnitTestCase {
 	 * @param actual The actual object.
 	 */
 	static void assertEquals(int expected, int actual){
-		println 'I am here! int'
-		assert expected == actual
-	}
-	
-	/**
-	 * Asserts that two doubles or floats are equal to within a positive delta.
-	 * @param expected The expected object
-	 * @param actual The actual object
-	 * @param delta The delta
-	 */
-	static void assertEquals(double expected, double actual, double delta){
-		println 'I am here! double'
 		assert expected == actual
 	}
 	
@@ -69,7 +56,6 @@ class JMockControllerUnitTestCase extends ControllerUnitTestCase {
 	 * @param actual The actual long.
 	 */
 	static void assertEquals(long expected, long actual){
-		println 'I am here! long'
 		assert expected == actual
 	}
 	
@@ -79,7 +65,6 @@ class JMockControllerUnitTestCase extends ControllerUnitTestCase {
 	 * @param actual The actual String.
 	 */
 	static void assertEquals(String expected, String actual){
-		println 'I am here! String'
 		assert expected == actual
 	}
 
@@ -89,7 +74,6 @@ class JMockControllerUnitTestCase extends ControllerUnitTestCase {
 	 * @param actual The actual object.
 	 */
 	static void assertNotSame(Object unexpected, Object actual){
-		println 'I am here! objects not same'
 		assert unexpected.hashCode() != actual.hashCode()
 	}
 	
@@ -99,7 +83,6 @@ class JMockControllerUnitTestCase extends ControllerUnitTestCase {
 	 * @param actual The unexpected object.
 	 */
 	static void assertSame(Object expected, Object actual){
-		println 'I am here! objects same'
 		assert expected.hashCode() == actual.hashCode()
 	}
 

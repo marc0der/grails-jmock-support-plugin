@@ -33,36 +33,47 @@ class JMockTagLibUnitTestCase extends TagLibUnitTestCase {
 	}
 	
 	/**
-	 * Asserts that two objects are equal.
+	 * Asserts that two Objects are equal.
+	 * @param expected The expected Object.
+	 * @param actual The actual Object.
+	 */
+	static void assertEquals(Object expected, Object actual){
+		assert expected == actual
+	}
+			
+	/**
+	 * Asserts that two integers are equal.
 	 * @param expected The expected object.
 	 * @param actual The actual object.
 	 */
-	static void assertEquals(def expected, def actual){
+	static void assertEquals(int expected, int actual){
 		assert expected == actual
 	}
 	
 	/**
-	 * Asserts that an object isn't null.
-	 * @param obj The object.
+	 * Asserts that two longs are equal.
+	 * @param expected The expected long.
+	 * @param actual The actual long.
 	 */
-	static void assertNotNull(def obj){
-		assert obj != null
-	}
-
-	/**
-	 * Asserts that an object is null.
-	 * @param obj The object.
-	 */
-	static void assertNull(def obj){
-		assert obj == null
+	static void assertEquals(long expected, long actual){
+		assert expected == actual
 	}
 	
+	/**
+	 * Asserts that two Strings are equal.
+	 * @param expected The expected String.
+	 * @param actual The actual String.
+	 */
+	static void assertEquals(String expected, String actual){
+		assert expected == actual
+	}
+
 	/**
 	 * Asserts that two objects do not refer to the same object.
 	 * @param unexpected The unexpected object.
 	 * @param actual The actual object.
 	 */
-	static void assertNotSame(def unexpected, def actual){
+	static void assertNotSame(Object unexpected, Object actual){
 		assert unexpected.hashCode() != actual.hashCode()
 	}
 	
@@ -71,24 +82,8 @@ class JMockTagLibUnitTestCase extends TagLibUnitTestCase {
 	 * @param expected The expected object.
 	 * @param actual The unexpected object.
 	 */
-	static void assertSame(def expected, def actual){
+	static void assertSame(Object expected, Object actual){
 		assert expected.hashCode() == actual.hashCode()
-	}
-	
-	/**
-	 * Asserts that a condition is true.
-	 * @param condition The condition.
-	 */
-	static void assertTrue(def condition){
-		assert condition == true
-	}
-	
-	/**
-	 * Asserts that a condition is false.
-	 * @param condition The condition.
-	 */
-	static void assertFalse(def condition){
-		assert condition == false
 	}
 
 }

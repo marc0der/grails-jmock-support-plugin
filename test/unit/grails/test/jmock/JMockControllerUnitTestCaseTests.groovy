@@ -21,10 +21,6 @@ class JMockControllerUnitTestCaseTests extends GroovyTestCase {
 		testCase.assertEquals 1, 1
 	}
 	
-	void testAssertEqualsDoubleTrue(){
-		testCase.assertEquals 1d, 1d, 0d
-	}
-
 	void testAssertEqualsLongTrue(){
 		testCase.assertEquals 1L, 1L
 	}
