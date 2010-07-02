@@ -22,31 +22,22 @@ class JMockControllerUnitTestCaseTests extends GroovyTestCase {
 	}
 	
 	void testAssertEqualsDoubleTrue(){
-		testCase.assertEquals 1d, 1d
+		testCase.assertEquals 1d, 1d, 0d
 	}
-	
+
 	void testAssertEqualsLongTrue(){
-		testCase.assertEquals Long.MAX_VALUE, Long.MAX_VALUE
+		testCase.assertEquals 1L, 1L
 	}
 	
 	void testAssertEqualsObjectTrue(){
-		Object obj1 = new Integer(100)
-		Object obj2 = new Integer(100)
-		testCase.assertEquals obj1, obj2
+		Object obj = new Object()
+		testCase.assertEquals obj, obj
 	}
 	
 	void testAssertEqualsStringTrue(){
 		String str1 = "A String"
 		String str2 = "A String"
 		testCase.assertEquals str1, str2
-	}
-	
-	void testAssertNotNull(){
-		testCase.assertNotNull 'not null'
-	}
-	
-	void testAssertNull(){
-		testCase.assertNull null
 	}
 	
 	void testAssertNotSame(){
@@ -59,13 +50,5 @@ class JMockControllerUnitTestCaseTests extends GroovyTestCase {
 		def obj1 = new Object()
 		testCase.assertSame obj1, obj1
 	}
-	
-	void testAssertTrue(){
-		testCase.assertTrue true
-	}
-	
-	void testAssertFalse(){
-		testCase.assertFalse false
-	}
-	
+		
 }
